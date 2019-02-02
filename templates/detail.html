@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <nav class="mt-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+            <li class="breadcrumb-item"><a href="/?id={{dic.category_id}}">{{dic.name}}</a></li>
+            <li class="breadcrumb-item active">{{dic.title}}</li>
+        </ol>
+    </nav>
+    <h1 class="mb-4">{{dic.title}}</h1>
+    <pre class="p-2" style="background-color: #e9ecef;"><code style="color: #000;">{{dic.detail}}</code></pre>
+    <p class="text-right" style="margin-bottom: 100px;">
+        <a href="/memo_update/{{dic.id}}" class="btn btn-primary">編集</a>
+    </p>
+    <div class="text-center my-4">
+        <button class="btn" onclick="window.scrollTo(0,0);">上に戻る</button>
+    </div>
+</div>
+{% endblock body %}
